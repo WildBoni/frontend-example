@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <section id="artists-container">
+      <!-- Qui inseriremo gli artisti -->
+    </section>
+    <!-- Loading state per il form artista -->
+    <div>
+      <div id="loading-state">Loading...</div>
+      <!-- Form per modificare un artista -->
+      <form action="#" id="edit-artist-form">
+        <!-- campo nascosto con "hidden": mi serve per tenere traccia dell'id dell'artista che voglio modificare -->
+        <input type="hidden" name="artistId" />
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" /><br />
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" /><br />
+        <label for="category">Category</label>
+        <select name="category" id="category">
+          <option value="rock">Rock</option>
+          <option value="blues">Blues</option>
+          <option value="metal">Metal</option>
+          <option value="pop">Pop</option>
+        </select>
+        <br />
+        <button type="submit" id="edit-artist-button">Invia</button>
+        <button type="reset" id="close-edit-form-button">CHIUDI[x]</button>
+      </form>
+    </div>
+    <div id="message-container" class="message-container"></div>
+
+    <h2>Insert new artist</h2>
+    <!-- Form per inserire un artista -->
+    <form action="#" id="create-artist-form" style="display: block">
+      Name: <input type="text" name="name" /><br />
+      Description: <input type="text" name="description" /><br />
+      Category:
+      <select name="category">
+        <option value="rock">Rock</option>
+        <option value="blues">Blues</option>
+        <option value="metal">Metal</option>
+        <option value="pop">Pop</option>
+      </select>
+      <br />
+      Upload: <input type="file" name="image" /><br />
+      <button type="submit">Invia</button>
+    </form>
+  </body>
+</html>
